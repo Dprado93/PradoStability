@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-labelledby="titulo desc">
+  <title id="titulo">Imagem 02 - Placeholder financeiro</title>
+  <desc id="desc">Imagem reservada para possível banner financeiro, cartões, gráficos ou aplicativo no celular.</desc>
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#1e40af"/>
+      <stop offset="1" stop-color="#5eead4"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" rx="48" fill="url(#g)"/>
+  <circle cx="980" cy="80" r="210" fill="#ffffff" opacity="0.10"/>
+  <circle cx="130" cy="520" r="240" fill="#ffffff" opacity="0.10"/>
+  <rect x="120" y="160" width="380" height="230" rx="30" fill="#ffffff" opacity="0.92"/>
+  <rect x="170" y="220" width="170" height="22" rx="11" fill="#1e40af" opacity="0.28"/>
+  <rect x="170" y="270" width="260" height="32" rx="16" fill="#1e40af" opacity="0.72"/>
+  <rect x="170" y="330" width="110" height="18" rx="9" fill="#94a3b8" opacity="0.58"/>
+  <path d="M640 410 L760 300 L840 350 L1030 160" fill="none" stroke="#ffffff" stroke-width="30" stroke-linecap="round" stroke-linejoin="round" opacity="0.88"/>
+  <text x="50%" y="540" text-anchor="middle" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="30" opacity="0.85">imagem 02 - banner financeiro reservado</text>
+</svg>

@@ -1,0 +1,197 @@
+REFERÊNCIAS DO PROJETO - PRADO STABILITY FINTECH
+====================================================
+
+1. O QUE ESTE PROJETO ENTREGA
+-----------------------------
+Este projeto entrega uma única tela de uma aplicação Fintech, conforme a regra da atividade.
+A tela escolhida foi "Registro de Gasto", porque é uma funcionalidade central do aplicativo:
+sem cadastrar gasto, não existe histórico, categoria funcionando, resumo mensal ou análise financeira.
+
+A tela foi montada com:
+- HTML no arquivo index.html.
+- CSS próprio separado em /css/estilo.css.
+- Tailwind CSS carregado por CDN em formato de CSS.
+- Imagens reservadas dentro da pasta /imagens.
+- Documentação e apoio dentro da pasta /referencias.
+- Nenhum JavaScript de aplicação.
+
+2. POR QUE ESCOLHI A TELA DE REGISTRO DE GASTO
+----------------------------------------------
+A escolha foi feita por coerência com o material do projeto Fintech.
+Nas telas de referência, existe uma tela de "Registro de Gasto" com formulário de valor, categoria,
+data, localização e um mapa/imagem lateral.
+
+Também existe ligação com a modelagem de casos de uso, em que o caso escolhido é registrar despesa.
+Isso deixa a tela bem defendível em uma avaliação, porque ela não parece uma página solta: ela nasce
+de uma necessidade real do sistema.
+
+A tela conversa com estas ideias do projeto:
+- Registrar despesas.
+- Escolher categoria.
+- Informar data.
+- Associar localização ou descrição.
+- Atualizar o controle financeiro.
+- Preparar informação para histórico e resumo mensal.
+
+3. IDENTIDADE VISUAL
+--------------------
+A identidade visual foi baseada em uma fintech simples, limpa e moderna.
+O sistema usa:
+- Azul forte como cor principal.
+- Cards brancos com bordas arredondadas.
+- Fundo cinza claro.
+- Campos de formulário com tom quase branco/azulado.
+- Sombra leve para dar profundidade.
+- Tipografia simples, usando Arial/Helvetica para abrir bem em qualquer máquina.
+
+Cores principais usadas:
+- Azul principal: #2642bd
+- Azul escuro: #1f36a2
+- Fundo: #f2f2f7
+- Card: #ffffff
+- Texto principal: #111827
+- Texto secundário: #6b7280
+- Verde: #16a34a
+- Vermelho: #ef4444
+
+4. ESTRUTURA DE PASTAS
+----------------------
+/prado-stability-fintech
+│
+├── index.html
+│   Tela principal do projeto. É o arquivo que o professor deve abrir no navegador.
+│
+├── /css
+│   └── estilo.css
+│       Arquivo CSS separado, com identidade visual e responsividade.
+│
+├── /imagens
+│   ├── imagem-01-mapa-placeholder.svg
+│   ├── imagem-02-banner-financeiro-placeholder.svg
+│   ├── imagem-03-avatar-placeholder.svg
+│   └── LEIA-ME-IMAGENS.txt
+│
+└── /referencias
+    ├── REFERENCIAS_DO_PROJETO.txt
+    ├── MANUAL_GITHUB_SITE.txt
+    ├── MAPA_DE_LINHAS.txt
+    ├── CHECKLIST_ENTREGA.txt
+    └── LINK_REPOSITORIO_GITHUB_MODELO.pdf
+
+5. EXPLICAÇÃO DA TELA
+---------------------
+A tela tem 4 partes principais:
+
+A) Menu lateral
+No desktop, o menu lateral fica fixo à esquerda. Ele mostra que o usuário está dentro do sistema.
+O item "Novo Gasto" está marcado como ativo.
+
+B) Cabeçalho
+Mostra o título "Registro de Gasto", subtítulo e saldo atual. O saldo conecta a tela ao conceito
+de controle financeiro.
+
+C) Formulário
+Tem campos para:
+- Valor do gasto.
+- Categoria.
+- Data.
+- Localização.
+- Descrição.
+- Botão Registrar Gasto.
+
+D) Mapa / imagem lateral
+Reserva espaço para uma imagem visual de localização. No projeto real, isso poderia ser um mapa.
+Na atividade, usei um SVG placeholder para não quebrar carregamento de imagem.
+
+6. RESPONSIVIDADE
+-----------------
+A responsividade foi pensada assim:
+
+Desktop:
+- Menu lateral à esquerda.
+- Formulário e mapa lado a lado.
+- Conteúdo centralizado com largura máxima.
+
+Tablet:
+- Conteúdo continua confortável.
+- Grid passa a poder respirar melhor.
+
+Celular:
+- Menu lateral desaparece.
+- Entra um topo mobile.
+- Formulário fica em uma coluna.
+- Botão ocupa largura total.
+- Mapa fica abaixo do formulário.
+- Campos de categoria e data empilham.
+
+7. USO DO TAILWIND CSS
+----------------------
+O Tailwind foi usado no HTML por meio de classes utilitárias, por exemplo:
+- min-h-screen
+- bg-gray-100
+- text-gray-900
+- flex
+- hidden
+- lg:flex
+- flex-col
+- justify-between
+- flex-1
+- lg:hidden
+
+O CSS próprio complementa o Tailwind para criar identidade visual mais específica.
+Essa combinação ajuda porque o Tailwind acelera estrutura/layout, enquanto o CSS separado deixa
+o projeto com personalidade própria.
+
+8. SOBRE NÃO USAR JAVASCRIPT
+----------------------------
+A atividade diz que não é necessário usar JavaScript.
+Por isso, esta tela não tem cadastro real, modal, filtro dinâmico ou gravação de dados.
+O formulário tem validações básicas do próprio HTML, como required e type="date".
+Isso é suficiente para a proposta da fase: recriar uma tela com HTML, CSS e Tailwind CSS.
+
+9. IMAGENS RESERVADAS
+---------------------
+Imagem 01: imagem-01-mapa-placeholder.svg
+Uso: usada no card lateral da tela.
+Substituição ideal: foto aérea, mapa estilizado ou imagem urbana.
+
+Imagem 02: imagem-02-banner-financeiro-placeholder.svg
+Uso: reserva para futura tela de login, dashboard ou material visual.
+Substituição ideal: ilustração de app financeiro, gráfico, cartão ou celular.
+
+Imagem 03: imagem-03-avatar-placeholder.svg
+Uso: reserva para futuro perfil de usuário.
+Substituição ideal: avatar do usuário ou ícone de conta.
+
+10. COMO ABRIR O PROJETO
+------------------------
+1. Extraia o ZIP.
+2. Abra a pasta prado-stability-fintech.
+3. Dê dois cliques no arquivo index.html.
+4. O navegador deve abrir a tela.
+
+Não precisa instalar nada.
+Não precisa rodar servidor.
+Não precisa terminal.
+
+11. PONTOS FORTES PARA AVALIAÇÃO
+--------------------------------
+- A tela está claramente relacionada ao projeto Fintech.
+- O HTML e CSS estão separados.
+- O projeto possui Tailwind CSS.
+- O layout é responsivo.
+- A pasta tem organização clara.
+- As imagens não quebram, porque existem placeholders.
+- O código está comentado como guia de estudo.
+- Existe manual para subir no GitHub pelo site.
+- Existe checklist de entrega.
+- Existe modelo de PDF para link do repositório.
+
+12. PONTOS QUE EU NÃO FIZ PORQUE NÃO ERAM PEDIDOS
+-------------------------------------------------
+- Não fiz banco de dados.
+- Não fiz JavaScript.
+- Não fiz login real.
+- Não fiz gravação de despesa.
+- Não fiz integração com mapa real.
+- Não fiz várias telas, porque a regra pede apenas 1 tela.

@@ -1,0 +1,405 @@
+/*
+    PROJETO: Prado Stability - Fintech
+    ARQUIVO: /css/estilo.css
+
+    Nota do aluno:
+    Deixei o CSS bem comentado para estudar depois e para o professor ver 
+    a organizacao do projeto na hora de corrigir.
+
+    REGRAS DA ATIVIDADE:
+    - CSS separado do HTML.
+    - Tailwind por CDN no HTML, mas este arquivo mantem o estilo proprio.
+    - Responsividade feita aqui e com classes do Tailwind.
+
+    ORGANIZACAO DOS BLOCOS:
+    01. Variaveis de estilo
+    02. Resets gerais
+    03. Estrutura principal
+    04. Sidebar desktop
+    05. Topo mobile
+    06. Cabecalho da pagina
+    07. Grid de conteudo
+    08. Card do formulario
+    09. Campos do formulario
+    10. Botoes
+    11. Card do mapa/imagem
+    12. Nota final
+    13. Responsividade
+*/
+
+/* --------------------------------------------------------------------------
+   01. VARIAVEIS DE ESTILO
+   Aqui mudei as cores para o azul e roxo que combinam com o logo novo.
+   -------------------------------------------------------------------------- */
+:root {
+    --azul-legal: #4f46e5;
+    --azul-escuro-sidebar: #312e81;
+    --azul-clarinho: #e0e7ff;
+    --cor-fundo-tela: #f8fafc;
+    --cor-do-card: #ffffff;
+    --cor-do-texto: #1e293b;
+    --cor-texto-apagado: #94a3b8;
+    --cor-borda: #e2e8f0;
+    --cor-campo-input: #f8fafc;
+    --cor-verde-sucesso: #10b981;
+    --sombra-card: 0 10px 25px rgba(30, 41, 59, 0.05);
+}
+
+/* --------------------------------------------------------------------------
+   02. RESETS GERAIS
+   Tirando margens padrao dos navegadores para nao quebrar o layout.
+   -------------------------------------------------------------------------- */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    font-family: sans-serif;
+    background: var(--cor-fundo-tela);
+    color: var(--cor-do-texto);
+}
+
+/* --------------------------------------------------------------------------
+   03. ESTRUTURA PRINCIPAL
+   Margem da area que segura tudo.
+   -------------------------------------------------------------------------- */
+.main-content {
+    width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   04. SIDEBAR DESKTOP
+   Barra lateral fixa que so aparece no computador.
+   -------------------------------------------------------------------------- */
+.sidebar {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 100vh;
+    padding: 30px 20px;
+    background: var(--azul-escuro-sidebar);
+    color: #ffffff;
+    z-index: 40;
+}
+
+.brand-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 35px;
+    font-weight: bold;
+}
+
+.brand-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+}
+
+/* Forcando o logo novo a caber direitinho na caixinha */
+.brand-icon img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    padding: 4px !important;
+}
+
+.brand-name {
+    font-size: 1.1rem;
+}
+
+.menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 15px;
+    border-radius: 12px;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+}
+
+.menu-item:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.menu-item.active {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.2);
+    font-weight: bold;
+}
+
+.logout-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 15px;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+}
+
+.logout-link:hover {
+    color: #ffcccc;
+}
+
+/* --------------------------------------------------------------------------
+   05. TOPO MOBILE
+   Barra de cima que so aparece no celular quando a lateral some.
+   -------------------------------------------------------------------------- */
+.mobile-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background: #ffffff;
+    border-bottom: 1px solid var(--cor-borda);
+    border-radius: 15px;
+    margin-bottom: 25px;
+}
+
+.mobile-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.mobile-brand-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 8px;
+    background: var(--azul-legal);
+}
+
+/* Logo novo cabendo no topo do celular */
+.mobile-brand-icon img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    padding: 2px !important;
+}
+
+.mobile-action {
+    padding: 8px 12px;
+    border-radius: 8px;
+    color: #ffffff;
+    background: var(--azul-legal);
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* --------------------------------------------------------------------------
+   06. CABECALHO DA PAGINA
+   Titulo principal da tela e a caixinha de Saldo Atual.
+   -------------------------------------------------------------------------- */
+.page-heading {
+    border-bottom: 1px solid var(--cor-borda);
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.eyebrow {
+    color: var(--azul-legal);
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.balance-pill {
+    padding: 15px 20px;
+    border: 1px solid var(--azul-clarinho);
+    border-radius: 15px;
+    background: #ffffff;
+    box-shadow: var(--sombra-card);
+}
+
+/* --------------------------------------------------------------------------
+   07. GRID DE CONTEUDO
+   Resolvido com as Midia Queries la embaixo para nao quebrar no desktop.
+   -------------------------------------------------------------------------- */
+.content-grid {
+    width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   08. CARD DO FORMULARIO
+   A caixa branca que segura os inputs do gasto.
+   -------------------------------------------------------------------------- */
+.form-card {
+    padding: 25px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 20px;
+    background: var(--cor-do-card);
+    box-shadow: var(--sombra-card);
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--cor-verde-sucesso);
+}
+
+/* --------------------------------------------------------------------------
+   09. CAMPOS DO FORMULARIO
+   Bordas e fundo dos inputs de texto.
+   -------------------------------------------------------------------------- */
+.field-control {
+    border: 1px solid var(--cor-borda);
+    border-radius: 12px;
+    background: var(--cor-campo-input);
+}
+
+.field-control:focus-within {
+    border-color: var(--azul-legal);
+    background: #ffffff;
+}
+
+/* --------------------------------------------------------------------------
+   10. BOTOES
+   Estilo do botao de enviar o formulario.
+   -------------------------------------------------------------------------- */
+.primary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    padding: 0 25px;
+    border: 0;
+    border-radius: 12px;
+    background: var(--azul-legal);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.primary-button:hover {
+    background: #4338ca;
+}
+
+/* --------------------------------------------------------------------------
+   11. CARD DO MAPA/IMAGEM
+   Visual da foto do mapa do lado direito.
+   -------------------------------------------------------------------------- */
+.map-card {
+    position: relative !important;
+    border: 1px solid var(--cor-borda);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--sombra-card);
+    background: #e2e8f0;
+}
+
+/* Faz a imagem do mapa preencher o bloco todo sem distorcer */
+.map-card img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+}
+
+.map-pin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    font-size: 1.5rem;
+}
+
+.location-card {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.location-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 8px;
+}
+
+/* --------------------------------------------------------------------------
+   12. NOTA FINAL
+   Texto simples do RM no rodape.
+   -------------------------------------------------------------------------- */
+.student-note {
+    padding: 30px 0;
+}
+
+/* --------------------------------------------------------------------------
+   13. RESPONSIVIDADE
+   Regras de media query separadas aqui para ajustar o desktop.
+   -------------------------------------------------------------------------- */
+@media (min-width: 1024px) {
+    /* Afasta o conteudo da tela para a sidebar fixa nao cobrir */
+    .main-content {
+        padding-left: 320px !important;
+    }
+
+    /* Divide o formulario e o mapa em duas colunas no computador */
+    .content-grid {
+        display: grid !important;
+        grid-template-columns: 1.25fr 0.75fr !important;
+        gap: 30px !important;
+        align-items: stretch !important;
+    }
+
+    .page-heading {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+    }
+
+    /* Faz a caixa do mapa ter a mesma altura da caixa do formulario */
+    .map-card {
+        height: 100% !important;
+        min-height: 100% !important;
+    }
+}
+
+@media (max-width: 1023px) {
+    /* No celular ou tablet vira uma coluna só empilhada */
+    .content-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .map-card {
+        height: 350px;
+    }
+}

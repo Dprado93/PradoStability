@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tela de registro de gasto do projeto Fintech Prado Stability.">
+    <title>Prado Stability | Registro de Gasto</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+
+    <link rel="stylesheet" href="./css/estilo.css">
+</head>
+<body>
+    <div class="app-shell flex">
+
+        <aside class="sidebar hidden lg:flex flex-col justify-between">
+            <div>
+                <a href="#topo" class="brand-area">
+                    <span class="brand-icon">
+                        <img src="./imagens/logo-prado-stability.png" alt="Logo Prado Stability">
+                    </span>
+                    <span class="brand-name">Prado Stability</span>
+                </a>
+
+                <nav class="menu-list">
+                    <a class="menu-item" href="#resumo">
+                        <span class="menu-icon">◔</span>
+                        <span>Resumo Mensal</span>
+                    </a>
+                    <a class="menu-item" href="#categorias">
+                        <span class="menu-icon">▦</span>
+                        <span>Categorias</span>
+                    </a>
+                    <a class="menu-item active" href="#novo-gasto">
+                        <span class="menu-icon">＋</span>
+                        <span>Novo Gasto</span>
+                    </a>
+                    <a class="menu-item" href="#historico">
+                        <span class="menu-icon">☰</span>
+                        <span>Histórico</span>
+                    </a>
+                </nav>
+            </div>
+
+            <a class="logout-link" href="#sair">
+                <span>↳</span>
+                <span>Sair</span>
+            </a>
+        </aside>
+
+        <main id="topo" class="main-content flex-1 p-6">
+
+            <header class="mobile-topbar lg:hidden">
+                <div class="mobile-brand">
+                    <span class="mobile-brand-icon">
+                        <img src="./imagens/logo-prado-stability.png" alt="Logo Prado Stability">
+                    </span>
+                    <span>Prado Stability</span>
+                </div>
+                <a class="mobile-action" href="#novo-gasto">Novo gasto</a>
+            </header>
+
+            <section class="page-heading flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                <div>
+                    <p class="eyebrow">Controle financeiro pessoal</p>
+                    <h1 class="text-3xl font-bold">Registro de Gasto</h1>
+                    <p class="page-subtitle">Adicione uma nova transacao financeira e mantenha seu saldo atualizado.</p>
+                </div>
+
+                <aside class="balance-pill">
+                    <span>Saldo Atual</span>
+                    <strong>R$ 3.524,50</strong>
+                </aside>
+            </section>
+
+            <section id="novo-gasto" class="content-grid">
+
+                <article class="form-card">
+                    <div class="card-title-row flex justify-between items-start mb-6">
+                        <div>
+                            <h2 class="text-lg font-bold">Dados da despesa</h2>
+                            <p class="text-gray-400 text-sm">Preencha os campos principais do gasto.</p>
+                        </div>
+                        <span class="status-dot"></span>
+                    </div>
+
+                    <form class="expense-form space-y-4" action="#" method="post">
+
+                        <label class="block" for="valor-gasto">
+                            <span class="text-sm font-semibold text-gray-700 block mb-1">Valor do Gasto</span>
+                            <span class="field-control flex items-center p-2">
+                                <span class="pl-2 pr-1 font-bold text-gray-400">R$</span>
+                                <input id="valor-gasto" name="valor-gasto" type="text" inputmode="decimal" placeholder="0,00" class="w-full bg-transparent p-2 text-lg font-bold focus:outline-none" required>
+                            </span>
+                        </label>
+
+                        <div class="form-row grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <label class="block" for="categoria">
+                                <span class="text-sm font-semibold text-gray-700 block mb-1">Categoria</span>
+                                <span class="field-control flex items-center p-2">
+                                    <span class="pl-2 pr-2">📊</span>
+                                    <select id="categoria" name="categoria" class="w-full bg-transparent p-2 focus:outline-none bg-white" required>
+                                        <option value="">Selecione</option>
+                                        <option value="alimentacao">Alimentação</option>
+                                        <option value="transporte">Transporte</option>
+                                        <option value="lazer">Lazer</option>
+                                        <option value="servicos">Serviços</option>
+                                        <option value="compras">Compras</option>
+                                        <option value="saude">Saúde</option>
+                                    </select>
+                                </span>
+                            </label>
+
+                            <label class="block" for="data-gasto">
+                                <span class="text-sm font-semibold text-gray-700 block mb-1">Data</span>
+                                <span class="field-control flex items-center p-2">
+                                    <span class="pl-2 pr-2">📅</span>
+                                    <input id="data-gasto" name="data-gasto" type="date" value="2026-04-27" class="w-full bg-transparent p-2 focus:outline-none" required>
+                                </span>
+                            </label>
+                        </div>
+
+                        <label class="block" for="localizacao">
+                            <span class="text-sm font-semibold text-gray-700 block mb-1">Localização</span>
+                            <span class="field-control flex items-center p-2">
+                                <span class="pl-2 pr-2">📍</span>
+                                <input id="localizacao" name="localizacao" type="text" placeholder="Ex: Supermercado Extra - Centro" class="w-full bg-transparent p-2 focus:outline-none">
+                            </span>
+                        </label>
+
+                        <label class="block" for="descricao">
+                            <span class="text-sm font-semibold text-gray-700 block mb-1">Descrição</span>
+                            <span class="field-control flex items-start p-2">
+                                <textarea id="descricao" name="descricao" rows="4" placeholder="Ex: Compra do mês, passagem, conta de luz..." class="w-full bg-transparent p-2 focus:outline-none resize-none"></textarea>
+                            </span>
+                        </label>
+
+                        <div class="flex justify-end pt-2">
+                            <button class="primary-button" type="submit">
+                                Registrar Gasto
+                            </button>
+                        </div>
+                    </form>
+                </article>
+
+                <aside class="map-card">
+                    <img src="./imagens/imagem-01-mapa-placeholder.svg" alt="Mapa da localização do gasto">
+
+                    <div class="map-pin">📍</div>
+
+                    <div class="location-card">
+                        <span class="location-icon bg-indigo-100 text-indigo-600">⌖</span>
+                        <div>
+                            <strong class="text-sm font-bold block">Sua Localização Atual</strong>
+                            <p class="text-xs text-gray-500">Rua Exemplo, 123 - Centro</p>
+                        </div>
+                    </div>
+                </aside>
+            </section>
+
+            <p class="student-note text-center text-xs text-gray-400 font-semibold tracking-wider uppercase mt-12">
+                FIAP - Analise e Desenvolvimento de Sistemas - Turma 1TDSOD-2026 - RM572712
+            </p>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-labelledby="titulo desc">
+  <title id="titulo">Imagem 03 - Placeholder de perfil</title>
+  <desc id="desc">Imagem reservada para futuro avatar ou fotografia do usuário.</desc>
+  <rect width="600" height="600" rx="120" fill="#eef3ff"/>
+  <circle cx="300" cy="225" r="95" fill="#2642bd" opacity="0.9"/>
+  <path d="M130 505c28-105 104-160 170-160s142 55 170 160" fill="#2642bd" opacity="0.9"/>
+  <text x="50%" y="560" text-anchor="middle" fill="#1f36a2" font-family="Arial, Helvetica, sans-serif" font-size="24">imagem 03 - avatar reservado</text>
+</svg>

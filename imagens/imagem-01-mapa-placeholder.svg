@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" role="img" aria-labelledby="titulo desc">
+  <title id="titulo">Imagem 01 - Placeholder de mapa</title>
+  <desc id="desc">Imagem reservada para futura foto aérea ou mapa do local onde o gasto foi registrado.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#172554"/>
+      <stop offset="0.45" stop-color="#334155"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <pattern id="quadras" width="120" height="120" patternUnits="userSpaceOnUse" patternTransform="rotate(28)">
+      <rect width="120" height="120" fill="none"/>
+      <path d="M10 20h100M10 60h100M10 100h100M20 10v100M60 10v100M100 10v100" stroke="#93c5fd" stroke-opacity="0.22" stroke-width="10" stroke-linecap="round"/>
+      <path d="M0 0h120v120H0z" fill="none" stroke="#ffffff" stroke-opacity="0.05"/>
+    </pattern>
+    <radialGradient id="luz" cx="50%" cy="42%" r="55%">
+      <stop offset="0" stop-color="#60a5fa" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#0f172a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="900" height="1200" fill="url(#bg)"/>
+  <rect width="900" height="1200" fill="url(#quadras)" opacity="0.88"/>
+  <rect width="900" height="1200" fill="url(#luz)"/>
+  <path d="M-80 960 C120 860 210 1020 390 930 C580 830 660 900 990 790" fill="none" stroke="#f8fafc" stroke-opacity="0.16" stroke-width="62" stroke-linecap="round"/>
+  <path d="M-90 280 C160 360 270 210 480 300 C660 378 720 248 1000 330" fill="none" stroke="#f8fafc" stroke-opacity="0.10" stroke-width="46" stroke-linecap="round"/>
+  <g opacity="0.88">
+    <rect x="86" y="96" width="170" height="110" rx="18" fill="#1e293b" stroke="#93c5fd" stroke-opacity="0.18"/>
+    <rect x="320" y="120" width="220" height="130" rx="20" fill="#1f2937" stroke="#93c5fd" stroke-opacity="0.16"/>
+    <rect x="620" y="80" width="170" height="210" rx="22" fill="#111827" stroke="#93c5fd" stroke-opacity="0.18"/>
+    <rect x="120" y="420" width="250" height="160" rx="24" fill="#0f172a" stroke="#93c5fd" stroke-opacity="0.15"/>
+    <rect x="470" y="455" width="260" height="190" rx="26" fill="#1e293b" stroke="#93c5fd" stroke-opacity="0.14"/>
+    <rect x="96" y="710" width="210" height="170" rx="24" fill="#111827" stroke="#93c5fd" stroke-opacity="0.14"/>
+    <rect x="400" y="760" width="330" height="230" rx="28" fill="#0f172a" stroke="#93c5fd" stroke-opacity="0.13"/>
+  </g>
+  <text x="50%" y="1120" text-anchor="middle" fill="#cbd5e1" font-family="Arial, Helvetica, sans-serif" font-size="28" opacity="0.72">imagem 01 - mapa/localização</text>
+</svg>
